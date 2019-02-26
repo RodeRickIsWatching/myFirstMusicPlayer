@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../assets/icon-fonts/icomoon.eot?q1y43o');
+  src:  url('../../assets/icon-fonts/icomoon.eot?q1y43o#iefix') format('embedded-opentype'),
+    url('../../assets/icon-fonts/icomoon.ttf?q1y43o') format('truetype'),
+    url('../../assets/icon-fonts/icomoon.woff?q1y43o') format('woff'),
+    url('../../assets/icon-fonts/icomoon.svg?q1y43o#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-play3:before {
+  content: "\ea1c";
+}
+.icon-pause2:before {
+  content: "\ea1d";
+}
+.icon-previous2:before {
+  content: "\ea23";
+}
+.icon-next2:before {
+  content: "\ea24";
+}
+.icon-indent-increase:before {
+  content: "\ea7b";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}

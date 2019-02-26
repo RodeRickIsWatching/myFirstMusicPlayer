@@ -1,0 +1,265 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    /* color: whitesmoke; */
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.info-wrapper,.duration-wrapper,.lrc-wrapper,.btn-wrapper{
+    position: relative;
+}
+.background-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background: darkgray;
+    float: left;
+    /* 下面元素margin-top触发margin塌陷，父级需要触发bfc才能解决 */
+    overflow: hidden;
+}
+
+.img-wrapper{
+    width: 50%;
+    padding-top: 50%;
+    border: 40px solid black;
+    border-radius: 50%;
+    margin: 15% auto 20px auto;
+    transform: rotate3d(0,0,1,0deg);
+}
+.song-info-wrapper{
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.btn-wrapper{
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    height: 50px;
+    display: flex;
+}
+.icon{
+    flex: 1;
+    height: 50px;
+    font-size: 35px;
+    line-height: 50px !important;
+    text-align: center;
+}
+.icon-heart{
+    color: white;
+    opacity: 0.5;
+}
+.fav.icon-heart{
+    color: red;
+    opacity: 0.5;
+}
+
+.lrc-wrapper{
+    position: relative;
+    width: 90%;
+    height: 35%;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    overflow-y: hidden;
+    
+}
+.lrc-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: top 0.5s linear;
+}
+.lrc-container span{
+    opacity: 0.5;
+}
+.lrc-container span.chosen{
+    opacity: 1;
+}
+.duration-wrapper{
+    height: 20px;
+    width: 90%;
+    margin: 20px auto;
+    line-height: 20px;
+    display: flex;
+}
+.start-duration{
+    float: left;
+    margin-right: 3px;
+}
+.end-duration{
+    float: right;
+    margin-left: 3px;
+}
+.progress-wrapper{
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    /* margin: 20px auto; */
+    /* top: 10px; */
+    /* left: 2%; */
+    height: 20px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.base-progress{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 100%;
+    background: black;
+}
+
+.move-progress{
+    transform: translateX(-100%);
+    height: 3px;
+    width: 96%;
+    background: red;
+}
+.move-progress::after{
+    content:'';
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+.lrc-container span{
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 21px;
+}
+
+/* list栏歌曲信息 */
+.list-box-wrapper{
+    width: 100%;
+    max-height: 0%;
+    position: fixed;
+    bottom: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid grey;
+    transition: max-height 0.3s linear;
+}
+.list-box-wrapper.on{
+    max-height: 43%;
+}
+.close-btn-wrapper.on{
+    bottom: 42%;
+}
+.close-btn-wrapper{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 40px;
+    background: grey;
+    position: fixed;
+    bottom: -5%;
+    transition: bottom 0.3s linear;
+}
+.close-btn-wrapper .close-icon{
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    height: 30px;
+    width: 10px;
+    /* border: 1px solid black; */
+    transform: rotateZ(45deg);
+    background: whitesmoke;
+}
+.close-btn-wrapper .close-icon::after{
+    content: '';
+    /* display: inline-block; */
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    /* border: 1px solid black; */
+    left: 0px;
+    transform: rotateZ(90deg);
+    background: whitesmoke;
+}
+.list-box-wrapper ul{
+    border-top: 1px solid grey;
+    padding: 10px;
+}
+.list-box-wrapper li{
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+h2{
+    display: inline-block;
+    font-weight: normal;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.song{
+}
+.singer{
+    color: #666;
+    font-size: 14px;
+}
+
+/* 点击歌词区域 */
+.full-screen-lrc-wrapper{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+.full-screen-lrc-wrapper.on .full-screen-lrc-container{
+    height: 100%;
+    overflow-y: scroll;
+}
+.full-screen-lrc-wrapper.on{
+    display: block;
+    opacity: 1;
+    transform: translateZ(1px);
+}
+.full-screen-lrc-wrapper.on .bg-container{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+.full-screen-lrc-wrapper span{
+    display: none;
+}
+.full-screen-lrc-wrapper.on span{
+    display: block;
+    transform: translateZ(50px);
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 21px;
+}

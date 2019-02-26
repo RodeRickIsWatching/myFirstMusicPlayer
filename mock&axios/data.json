@@ -1,0 +1,92 @@
+{
+    "songs": [
+        {
+            "order": "0",
+            "image": "source/OneDance.jpg",
+            "audio": "source/OneDance.mp3",
+            "lrc": "source/OneDance.lrc",
+            "song": "One Dance",
+            "album": "Views",
+            "singer": "Drake",
+            "duration": 174,
+            "isLike": true
+        },
+        {
+            "order": "1",
+            "image": "source/Humble.jpg",
+            "audio": "source/Humble.mp3",
+            "lrc": "source/Humble.lrc",
+            "song": "Humble",
+            "album": "Humble.",
+            "singer": "Kendrick Lamar",
+            "duration": 174,
+            "isLike": false
+        },
+        {
+            "order": "2",
+            "image": "source/Promises.jpg",
+            "audio": "source/Promises.mp3",
+            "lrc": "source/Promises.lrc",
+            "song": "Promises",
+            "album": "Promises",
+            "singer": "Calvin Harris / Sam Smith",
+            "duration": 213,
+            "isLike": false
+        },
+        {
+            "order": "3",
+            "image": "source/ShapeOfYou.jpg",
+            "audio": "source/ShapeOfYou.mp3",
+            "lrc": "source/ShapeOfYou.lrc",
+            "song": "Shape of You",
+            "album": "÷",
+            "singer": "ed sheeran",
+            "duration": 235,
+            "isLike": true
+        },
+        {
+            "order": "4",
+            "image": "source/Dont.jpg",
+            "audio": "source/Dont.mp3",
+            "lrc": "source/Dont.lrc",
+            "song": "Don't",
+            "album": "x",
+            "singer": "ed sheeran",
+            "duration": 219,
+            "isLike": true
+        },
+        {
+            "order": "5",
+            "image": "source/Sing.jpg",
+            "audio": "source/Sing.mp3",
+            "lrc": "source/Sing.lrc",
+            "song": "Sing",
+            "album": "x",
+            "singer": "ed sheeran",
+            "duration": 235,
+            "isLike": true
+        },
+        {
+            "order": "6",
+            "image": "source/HotlineBling.jpg",
+            "audio": "source/HotlineBling.mp3",
+            "lrc": "source/HotlineBling.lrc",
+            "song": "Hotline Bling",
+            "album": "Views",
+            "singer": "Drake",
+            "duration": 267,
+            "isLike": true
+        },
+        {
+            "order": "7",
+            "image": "source/Believer.jpg",
+            "audio": "source/Believer.mp3",
+            "lrc": "source/Believer.lrc",
+            "song": "Believer",
+            "album": "Evolve",
+            "singer": "Imagine Dragons",
+            "duration": 214,
+            "isLike": true
+        }
+    ]
+}
